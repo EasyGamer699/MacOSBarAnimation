@@ -1,0 +1,35 @@
+body {
+    background-image: url('assets/bg.png'); /* Replace with your image path */
+    background-repeat: no-repeat; /* Optional: prevents the image from repeating */
+    background-size: cover; /* Optional: scales the image to cover the entire element */
+    background-position: center center; /* Optional: centers the image */
+    background-attachment: fixed; /* Optional: fixes the background when scrolling */
+}
+
+.dock {
+    border-style: none;
+    margin-top: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+    height: 150px;
+    width: 40%;
+
+    border-radius: 200px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20%;
+}
+
+.icons img {
+  width: 150px;
+  height: 150px;
+}
