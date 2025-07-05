@@ -1,0 +1,2 @@
+# MacOSBarAnimation
+MacOS Bar Animation
