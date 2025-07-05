@@ -1,9 +1,22 @@
+@font-face {
+  font-family: 'Lumen'; /* Wähle einen Namen für deine Schriftart */
+  src: url('../assets/font/lumen.woff') format('woff'); /* Der Pfad zu deiner Schriftart */
+  font-weight: normal; /* Optional: Wenn die Schriftart nur eine Stärke hat */
+  font-style: normal; /* Optional: Wenn die Schriftart nur einen Stil hat */
+}
+
 body {
-    background-image: url('assets/bg.png'); /* Replace with your image path */
-    background-repeat: no-repeat; /* Optional: prevents the image from repeating */
-    background-size: cover; /* Optional: scales the image to cover the entire element */
-    background-position: center center; /* Optional: centers the image */
-    background-attachment: fixed; /* Optional: fixes the background when scrolling */
+    /* Behalte deine ursprünglichen Hintergrund-Eigenschaften bei,
+       da du nur die Animation fixen wolltest. */
+    background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    /* Für die Dock-Positionierung kannst du deine ursprünglichen Margin-Werte beibehalten,
+       oder wenn du möchtest, dass es zentriert ist, nutze 'flex' wie zuvor vorgeschlagen.
+       Ich behalte es hier so, wie es in deinem Originalcode war, um nur die Animation zu ändern. */
 }
 
 .dock {
@@ -11,20 +24,54 @@ body {
     margin-top: 20%;
     margin-left: 30%;
     margin-right: 30%;
-    
-    height: 150px;
-    width: 40%;
+
+    height: 150px; /* Behalte deine ursprüngliche Höhe bei */
+    width: 40%;    /* Behalte deine ursprüngliche Breite bei */
 
     border-radius: 200px;
 
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(50px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    /* Füge diese Flexbox-Eigenschaften hinzu, um Icons zu zentrieren */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Wichtig: Icons am unteren Rand des Docks ausrichten */
+
+    /* Füge eine Transition für Padding hinzu, wenn es im JS dynamisch geändert wird */
+    transition: padding 0.2s ease-out, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Dein ursprünglicher Gap */
+    /* margin-top: 20%; -- Dieser Margin kann Probleme mit der vertikalen Ausrichtung verursachen.
+                          'align-items: flex-end' auf dem Dock ist besser.
+                          Wenn du vertikalen Abstand brauchst, nutze 'padding-bottom' auf dem Dock oder
+                          'margin-bottom' auf den Icons, wenn du sie höher positionieren willst.
+    */
+    padding-bottom: 5px; /* Kleiner Puffer vom unteren Rand des Docks */
+}
+
+.icons img {
+    /* Setze hier die initiale Icon-Größe. Im Beispiel sind sie kleiner als 150px. */
+    width: 150px; /* Beispielgröße, passe sie an deine Icons an */
+    height: 150px; /* Stelle sicher, dass Breite und Höhe gleich sind */
+    display: block; /* Entfernt zusätzlichen Platz unter dem Bild */
+    object-fit: contain; /* Stellt sicher, dass das Bild passt */
+    transform-origin: center bottom; /* Wichtig für das "Wachsen aus dem Dock" */
+    /* Die Transition wird nun direkt im JS auf dem 'transform' gesetzt,
+       aber es schadet nicht, eine Fallback-Transition hier zu haben. */
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform; /* Performance-Optimierung */
+}
+
+.text {
+    color: white;
+    font-size: 40px; /* Beispielgröße, passe sie an deine Bedürfnisse an */
+    text-align: center;
+    margin-top: 200px; /* Abstand zwischen Icon und Text */
+    font-family: 'Lumen',   
 }
