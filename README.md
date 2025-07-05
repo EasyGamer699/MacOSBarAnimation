@@ -4,11 +4,11 @@ Smooth Mac OS Dock Animation.
 
 ## Demo
 
-[Click for Demo](https://easygamer699.github.io/MacOSBarAnimation/website/index.html)
+[Click for Demo](https://easygamer699.github.io/MacOSDockAnimation/website/index.html)
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/EasyGamer699/MacOSBarAnimation/refs/heads/main/screenshots/1.png)
+![App Screenshot](https://raw.githubusercontent.com/EasyGamer699/MacOSDockAnimation/refs/heads/main/screenshots/1.png)
 
 ## Acknowledgements
 
@@ -17,4 +17,4 @@ Smooth Mac OS Dock Animation.
 
 ## License
 
-[MIT](https://github.com/EasyGamer699/MacOSBarAnimation/blob/main/LICENSE)
+[MIT](https://github.com/EasyGamer699/MacOSDockAnimation/blob/main/LICENSE)
