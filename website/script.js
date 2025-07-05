@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const normalScale = 1;
     const hoverScale = 1.3; // Größere Skalierung für das gehoverte Icon
     const neighborScale = 1.1; // Kleinere Skalierung für Nachbarn
-    const transitionDuration = '0.2s';
+    const transitionDuration = '0.4s';
 
     // Initialisiere Icons mit grundlegenden Stilen
     icons.forEach(icon => {

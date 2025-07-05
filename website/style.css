@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lumen'; /* Wähle einen Namen für deine Schriftart */
-  src: url('../assets/font/lumen.woff') format('woff'); /* Der Pfad zu deiner Schriftart */
+  src: url('assets/font/Lumen-Full.ttf') format('woff'); /* Der Pfad zu deiner Schriftart */
   font-weight: normal; /* Optional: Wenn die Schriftart nur eine Stärke hat */
   font-style: normal; /* Optional: Wenn die Schriftart nur einen Stil hat */
 }
@@ -68,10 +68,21 @@ body {
     will-change: transform; /* Performance-Optimierung */
 }
 
-.text {
+.hello {
     color: white;
-    font-size: 40px; /* Beispielgröße, passe sie an deine Bedürfnisse an */
+    font-size: 60px; /* Beispielgröße, passe sie an deine Bedürfnisse an */
     text-align: center;
     margin-top: 200px; /* Abstand zwischen Icon und Text */
-    font-family: 'Lumen',   
+    font-family: Lumen, sans-serif;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bubble {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    margin-left: 42%;
+    margin-right: 42%;
+    border-radius: 200px;
+    backdrop-filter: blur(50px);
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
