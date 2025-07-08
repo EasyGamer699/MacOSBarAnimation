@@ -26,7 +26,7 @@ body {
     margin-right: 30%;
 
     height: 150px; /* Behalte deine ursprüngliche Höhe bei */
-    width: 40%;    /* Behalte deine ursprüngliche Breite bei */
+    width: 700px;    /* Behalte deine ursprüngliche Breite bei */
 
     border-radius: 200px;
 
@@ -80,9 +80,9 @@ body {
 .bubble {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     margin-left: 42%;
-    margin-right: 42%;
     border-radius: 200px;
     backdrop-filter: blur(50px);
     height: 120px;
+    width: 300px ;
     background-color: rgba(255, 255, 255, 0.2);
 }
